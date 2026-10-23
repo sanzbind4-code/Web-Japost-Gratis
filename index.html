@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Kink Sanz | Japost Free</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 10% 0%,rgba(0,150,255,.18),transparent 30%),radial-gradient(circle at 100% 30%,rgba(0,90,255,.12),transparent 30%),linear-gradient(180deg,#0a2232,#061822 60%,#041117);color:#eef8ff;min-height:100vh}button,input,textarea,select{font-family:inherit}button{cursor:pointer}.container{width:calc(100% - 28px);max-width:950px;margin:auto}
+.header{height:88px;position:sticky;top:0;z-index:100;background:rgba(5,20,31,.96);backdrop-filter:blur(14px);border-bottom:1px solid #28526a}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px}.logo{width:55px;height:55px;border-radius:17px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 35%,#3bc0ff,transparent 27%),linear-gradient(145deg,#124b6d,#071b29);border:1px solid #2d7aa5;box-shadow:0 0 25px rgba(0,150,255,.15)}.logo span{color:#70d5ff;font-size:12px;font-weight:1000;text-align:center;line-height:1}.brand h1{font-size:21px;font-weight:900}.brand p{color:#52c4ff;font-size:13px;font-weight:800;margin-top:3px}.menu-btn{width:58px;height:50px;border-radius:18px;border:1px solid #31617b;background:#0b2738;color:#58caff;font-size:27px}.menu-box{display:none;position:absolute;right:14px;top:76px;width:210px;padding:8px;border-radius:17px;background:#092230;border:1px solid #28546c;box-shadow:0 20px 60px rgba(0,0,0,.5)}.menu-box.show{display:block}.menu-box button{width:100%;text-align:left;padding:13px;border:0;background:transparent;color:#d9edf7;border-radius:11px;font-weight:800}.menu-box button:hover{background:#10384d;color:#5bcaff}.ticker{background:#063c65;border-bottom:1px solid #176d9e}.ticker p{text-align:center;padding:10px;color:#bcecff;font-size:13px;font-weight:800}.page{display:none}.page.active{display:block}
+.home{padding:18px 0 50px}.hero{position:relative;overflow:hidden;min-height:235px;border-radius:27px;border:1px solid #1883bd;background:radial-gradient(circle at 10% 80%,rgba(0,190,255,.35),transparent 28%),radial-gradient(circle at 90% 10%,rgba(60,200,255,.22),transparent 28%),linear-gradient(125deg,#063d64,#087bb8 48%,#064b7d);box-shadow:0 18px 55px rgba(0,0,0,.3)}.hero:before{content:"";position:absolute;width:280px;height:280px;right:-110px;top:-120px;border:1px solid rgba(150,230,255,.2);border-radius:50%}.hero-content{position:relative;z-index:2;padding:29px}.pills{display:flex;gap:8px;margin-bottom:15px}.pill{padding:8px 18px;border-radius:50px;background:rgba(2,42,68,.5);border:1px solid rgba(110,215,255,.5);font-size:11px;font-weight:900}.hero h2{font-size:43px;line-height:1;letter-spacing:-2px}.hero h2 span{color:#72d7ff}.hero p{margin-top:13px;max-width:600px;color:#d0eaf5;font-size:15px;line-height:1.5}.hero-url{display:inline-block;margin-top:17px;padding:10px 18px;border-radius:50px;background:rgba(2,43,69,.5);border:1px solid rgba(126,218,255,.5);font-size:12px;font-weight:800}.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:18px}.home-card{min-height:135px;padding:22px;border-radius:21px;border:1px solid #234f68;background:linear-gradient(145deg,#102f43,#0b2536);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transition:.2s;cursor:pointer}.home-card:hover{transform:translateY(-3px);border-color:#218cc5}.home-icon{width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:15px;background:#0b334a;border:1px solid #27627e;color:#58caff;font-size:25px;margin-bottom:11px}.home-card h3{font-size:17px}.home-card p{margin-top:5px;color:#8faebb;font-size:11px}.promo{margin-top:48px}.label{display:inline-block;padding:9px 20px;border-radius:50px;border:1px solid #2c7198;background:#0b2c3e;color:#72d5ff;font-size:12px;font-weight:900;letter-spacing:1px}.promo h2{margin-top:17px;font-size:43px;line-height:1;letter-spacing:-2px}.promo h2 span{color:#45bfff}.promo>p{margin-top:13px;color:#91aebb;font-size:16px;line-height:1.5}.promo-card{margin-top:24px;padding:22px;border-radius:23px;background:linear-gradient(145deg,#0d3045,#0a2536);border:1px solid #26546c}.promo-top{display:flex;align-items:center;gap:15px}.promo-icon{width:64px;height:64px;display:flex;align-items:center;justify-content:center;border-radius:19px;background:#0b3550;border:1px solid #286a8d;color:#67d0ff;font-size:29px}.promo-info h3{font-size:20px}.promo-info p{margin-top:5px;color:#91aebb;font-size:12px}.available{margin-left:auto;padding:8px 13px;border-radius:50px;border:1px solid #29749a;color:#5ccaff;font-size:10px;font-weight:900}.primary,.submit-btn{width:100%;height:58px;margin-top:20px;border:0;border-radius:16px;background:linear-gradient(135deg,#0c9de6,#086da7);color:white;font-size:15px;font-weight:1000}
+.japost-page{padding:16px 0 50px}.back{display:flex;align-items:center;gap:8px;margin-bottom:14px}.back button{border:0;background:transparent;color:#65ceff;font-size:15px;font-weight:900}.form-card{overflow:hidden;border-radius:21px;border:1px solid #245875;background:#0c2a38;box-shadow:0 12px 40px rgba(0,0,0,.25);margin-bottom:16px}.card-header{min-height:80px;padding:15px 21px;display:flex;align-items:center;gap:15px;background:linear-gradient(135deg,#155d73,#246d68)}.number{width:43px;height:43px;flex-shrink:0;border-radius:11px;display:flex;align-items:center;justify-content:center;background:#67e8ff;color:#073444;font-size:21px;font-weight:1000}.header-icon{font-size:25px;color:#9eeeff}.card-header h2{font-size:20px;font-weight:900}.card-body{padding:25px 21px 24px}.field{margin-bottom:23px}.field label{display:block;margin-bottom:10px;color:#b8ccd3;font-size:16px;font-weight:900}.type-buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px}.type-btn{height:57px;border-radius:17px;border:1px solid #37728a;background:#123946;color:#9bbbc5;font-size:17px;font-weight:1000}.type-btn.active{background:linear-gradient(135deg,#159ee1,#0879b5);border-color:#55caff;color:white}.input,.select-input{width:100%;height:60px;border:0;outline:0;border-radius:20px;padding:15px 22px;background:#b9dfbb;color:#10211e;font-size:17px;font-weight:700}.textarea{width:100%;min-height:105px;resize:vertical;border:0;outline:0;border-radius:20px;padding:17px 22px;background:#b9dfbb;color:#10211e;font-size:16px;font-weight:700}.input::placeholder,.textarea::placeholder{color:#678274}.format-box{width:100%;min-height:210px;padding:22px 24px;border-radius:24px;background:#b9dfbb;color:#10211e;font-size:15px;font-weight:800;line-height:1.55;white-space:pre-wrap}.upload-box{position:relative;width:100%;min-height:125px;border-radius:23px;background:#b9dfbb;border:2px dashed #74a87c;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:15px}.upload-box input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}.upload-icon{font-size:31px;color:#37694e}.upload-box strong{margin-top:5px;color:#1d342a}.upload-box small{margin-top:5px;color:#567362;text-align:center}.preview{display:none;width:100%;max-height:350px;object-fit:contain;border-radius:18px;margin-top:12px}.preview.show{display:block}.note{padding:17px 20px;border-radius:17px;background:#0b2633;border:1px solid #204d63;color:#8eabb7;font-size:13px;line-height:1.6}.note strong{color:#d9f4ff}.buy-fields{display:none}.muted{color:#8eabb7;font-size:12px;line-height:1.5;margin-top:8px}.status-pill{display:inline-block;padding:6px 10px;border-radius:30px;font-size:11px;font-weight:900;background:#4a3710;color:#ffdf80}.status-pill.accepted{background:#123f2d;color:#80f0b2}.status-pill.rejected{background:#4b2025;color:#ff9aa2}.row-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.small-btn{border:1px solid #2b6682;background:#10374a;color:#dff6ff;padding:11px 13px;border-radius:12px;font-size:12px;font-weight:900}.small-btn.good{background:#126343;border-color:#2ca879}.small-btn.bad{background:#682e36;border-color:#a74a57}.small-btn:disabled{opacity:.5;cursor:not-allowed}.queue-item{padding:16px;border:1px solid #24536a;background:#0a2432;border-radius:16px;margin-top:12px;overflow-wrap:anywhere}.queue-item h3{font-size:15px;margin-bottom:9px}.queue-item p{font-size:13px;color:#b7ccd5;line-height:1.65}.queue-item .format-box{margin-top:10px;min-height:0;font-size:13px;padding:14px}.empty{padding:24px;text-align:center;color:#8eabb7;border:1px dashed #2b5368;border-radius:16px}.modal{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.75);align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.modal-card{width:100%;max-width:520px;max-height:90vh;overflow:auto;background:#0b2635;border:1px solid #28617c;border-radius:22px;padding:22px;box-shadow:0 20px 70px #000}.modal-card h2{font-size:22px;margin-bottom:14px}.modal-card .field{margin-bottom:15px}.modal-actions{display:flex;gap:9px}.modal-actions button{flex:1}.plain-btn{height:48px;border:1px solid #32647a;border-radius:13px;background:#102f40;color:#d7edf7;font-weight:900}.danger-text{color:#ff9da6}.success-text{color:#80f0b2}.admin-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:15px}.stat{background:#0a2432;border:1px solid #24536a;border-radius:15px;padding:14px;text-align:center}.stat strong{display:block;font-size:23px;color:#68d1ff}.stat span{font-size:11px;color:#a5bdc7}footer{padding:28px 0 35px;border-top:1px solid #183b4d;text-align:center;color:#6f8997;font-size:12px}footer strong{color:#4dbfff}.hidden{display:none!important}
+.recap-box{margin-top:15px;padding:16px;border:1px solid #24536a;background:#0a2432;border-radius:16px}.recap-head{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:10px 0}.recap-head select,.recap-head input{height:42px;border:1px solid #32647a;border-radius:11px;background:#102f40;color:#dff6ff;padding:0 10px;font-weight:800}.recap-head input{width:90px}.recap-summary{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}.recap-summary .stat{margin:0}.recap-table{width:100%;border-collapse:collapse;font-size:12px}.recap-table th,.recap-table td{padding:9px 7px;border-bottom:1px solid #173e50;text-align:left}.recap-table th{color:#7fd8ff}.recap-table td:last-child,.recap-table th:last-child{text-align:right}.recap-empty{padding:10px;text-align:center;color:#8eabb7}.today-badge{color:#80f0b2;font-weight:900}
+@media(max-width:600px){.header{height:82px}.logo{width:50px;height:50px}.brand h1{font-size:18px}.brand p{font-size:11px}.menu-btn{width:53px;height:47px}.hero h2{font-size:37px}.hero-content{padding:25px 22px}.home-grid{gap:11px}.home-card{min-height:120px;padding:16px 9px}.home-card h3{font-size:15px}.home-card p{font-size:10px}.promo h2{font-size:37px}.available{display:none}.card-body{padding:22px 17px}.format-box{padding:20px 21px;font-size:14px}.admin-stats{grid-template-columns:repeat(3,1fr)}.stat{padding:10px 5px}.stat strong{font-size:20px}}
+</style>
+</head>
+<body>
+<header class="header"><div class="container nav"><div class="brand"><div class="logo"><span>KINK<br>SANZ</span></div><div><h1>Kink Sanz</h1><p>Pusat Layanan Japost</p></div></div><button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">☰</button><div class="menu-box" id="menuBox"><button onclick="showPage('home')">🏠 Home</button><button onclick="showPage('japost')">✦ Japost Free</button><button onclick="showPage('cek')">◷ Cek Antrean</button><button onclick="openAdminLogin()">🔐 Login Admin</button></div></div></header>
+<div class="ticker"><div class="container"><p>🔵 Kink Sanz menyediakan layanan <b>Japost Free</b></p></div></div>
+<section id="homePage" class="page active"><main class="home"><div class="container"><div class="hero"><div class="hero-content"><div class="pills"><div class="pill">JAPOST FREE</div><div class="pill">KINK SANZ</div></div><h2>Selamat Datang<br>di <span>Kink Sanz</span></h2><p>Pusat layanan Japost Free Kink Sanz. Kirim format akun kamu dan masuk ke antrian Japost dengan lebih mudah.</p><div class="hero-url">🌐 KINK SANZ JAPOST</div></div></div><div class="home-grid"><div class="home-card" onclick="showPage('japost')"><div class="home-icon">✦</div><h3>Japost Free</h3><p>Kirim format Japost</p></div><div class="home-card" onclick="showPage('cek')"><div class="home-icon">◷</div><h3>Cek Antrian</h3><p>Cek status Japost</p></div></div><section class="promo"><div class="label">JAPOST FREE</div><h2>Promosikan akun<br>kamu lebih <span>luas.</span></h2><p>Post akun kamu melalui Japost Free Kink Sanz dengan format yang sudah tersedia.</p><div class="promo-card"><div class="promo-top"><div class="promo-icon">✦</div><div class="promo-info"><h3>Japost Free</h3><p>Layanan post akun Kink Sanz</p></div><div class="available">TERSEDIA</div></div><button class="primary" onclick="showPage('japost')">MULAI JAPOST</button></div></section></div></main></section>
+<section id="japostPage" class="page"><main class="japost-page"><div class="container"><div class="back"><button onclick="showPage('home')">← Kembali ke Home</button></div><div class="form-card"><div class="card-header"><div class="number">1</div><div class="header-icon">📄</div><h2>Data Japost</h2></div><div class="card-body"><div class="field"><label>Jenis Japost</label><div class="type-buttons"><button type="button" id="sellBtn" class="type-btn active" onclick="setType('sell')">SELL</button><button type="button" id="buyBtn" class="type-btn" onclick="setType('buy')">BUY</button></div></div><div class="field"><label>Nomor WhatsApp</label><input id="whatsapp" class="input" type="tel" inputmode="numeric" maxlength="16" placeholder="08xxxxxxxxxx"><p class="muted">Nomor ini dipakai admin untuk menghubungi kamu bila diperlukan.</p></div>
+<div id="sellFields"><div class="field"><label>Format Japost SELL</label><div class="format-box" id="sellFormatPreview">FORMAT JASA POST KINK SANZ!
+( BUKAN MILIK ADMIN )
+
+*SPEK*:
+*DANA*:
+*4 NO BELAKANG LU*:
+
+WAJIB MENGGUNAKAN REKBER KINK SANZ AGAR TERHINDAR DARI PENIPUAN
+
+WA REKBER KINK SANZ 085236988992</div></div><div class="field"><label>Spek</label><textarea id="spekSell" class="textarea" placeholder="Masukkan spek akun..."></textarea></div><div class="field"><label>Dana</label><input id="danaSell" class="input" type="text" placeholder="Contoh: 150K"></div><div class="field"><label>4 No Belakang</label><input id="fourSell" class="input" type="text" maxlength="4" inputmode="numeric" placeholder="4 angka terakhir nomor WA"></div><div class="field"><label>Foto akun</label><div class="upload-box"><input id="sellPhoto" type="file" accept="image/*" onchange="previewPhoto(event)"><div class="upload-icon">🖼️</div><strong>Pilih foto akun</strong><small>Foto dikompres dan disimpan di antrean, tanpa Firebase Storage</small></div><img id="photoPreview" class="preview" alt="Pratinjau foto"></div></div>
+<div id="buyFields" class="buy-fields"><div class="field"><label>Format Japost BUY</label><div class="format-box" id="buyFormatPreview">FORMAT JP NEED KINK SANZ
+
+*NEED*:
+*HARGA*:
+*LOG*:
+*MC*: KINK SANZ
+*4 NO BELAKANG LU*:
+
+➖ NOMOR REKBER HANYA DI
+085236988992
+➖ WAJIB MENGGUNAKAN MC KINK SANZ</div></div><div class="field"><label>Need</label><textarea id="needBuy" class="textarea" placeholder="Akun yang dicari..."></textarea></div><div class="field"><label>Harga</label><input id="hargaBuy" class="input" placeholder="Contoh: 200K"></div><div class="field"><label>Log</label><input id="logBuy" class="input" placeholder="Contoh: FB / VK / Gmail"></div><div class="field"><label>4 No Belakang</label><input id="fourBuy" class="input" maxlength="4" inputmode="numeric" placeholder="4 angka terakhir nomor WA"></div></div><div class="note"><strong>PERHATIAN</strong><br>4 angka terakhir wajib sama dengan 4 angka terakhir nomor WhatsApp. Pesanan akan langsung masuk ke sistem antrean setelah dikirim. Kamu tidak perlu mengirim format secara manual ke WhatsApp admin.</div><button class="submit-btn" id="submitBtn" onclick="submitOrder()">KIRIM ANTREAN</button><p class="muted" id="submitMessage" role="status"></p></div></div></div></main></section>
+<section id="cekPage" class="page"><main class="japost-page"><div class="container"><div class="back"><button onclick="showPage('home')">← Kembali ke Home</button></div><div class="form-card"><div class="card-header"><div class="number">2</div><div class="header-icon">◷</div><h2>Cek Antrean Japost</h2></div><div class="card-body"><div class="field"><label>Kode Pesanan</label><input id="lookupCode" class="input" placeholder="Contoh: KS-2026-0001" autocapitalize="characters"></div><button class="submit-btn" onclick="checkOrder()">CEK STATUS</button><div id="lookupResult" style="margin-top:15px"></div></div></div><div class="form-card"><div class="card-header"><div class="header-icon">📋</div><h2>Antrean Japost</h2></div><div class="card-body"><div id="publicQueueInfo" class="muted" style="margin-bottom:12px">Memuat antrean...</div><div id="publicQueueList"><div class="empty">Memuat daftar antrean...</div></div></div></div><div class="form-card"><div class="card-header"><div class="header-icon">📋</div><h2>Informasi</h2></div><div class="card-body"><p class="muted">Simpan kode pesanan yang muncul setelah submit. Gunakan kode itu untuk melihat status antrean.</p></div></div></div></main></section>
+<section id="adminPage" class="page"><main class="japost-page"><div class="container"><div class="back"><button onclick="showPage('home')">← Kembali ke Home</button><button onclick="adminLogout()">Keluar Admin</button></div><div class="form-card"><div class="card-header"><div class="number">A</div><div class="header-icon">🛡️</div><h2>Panel Admin Japost</h2></div><div class="card-body"><div class="admin-stats"><div class="stat"><strong id="statAll">0</strong><span>Total</span></div><div class="stat"><strong id="statWait">0</strong><span>Menunggu</span></div><div class="stat"><strong id="statDone">0</strong><span>Diterima</span></div></div><div class="type-buttons"><button class="type-btn active" id="filterAll" onclick="setFilter('ALL')">SEMUA</button><button class="type-btn" id="filterWait" onclick="setFilter('MENUNGGU')">MENUNGGU</button></div><div class="recap-box" id="recapBox" style="display:none"><h3>📊 REKAP ORDER HARIAN</h3><p class="muted">Order dihitung berdasarkan waktu kirim, dari 00.00 sampai 00.00 setiap hari.</p><div class="recap-head"><select id="recapMonth" onchange="loadDailyRecap()"></select><input id="recapYear" type="number" min="2020" max="2100" onchange="loadDailyRecap()"></div><div class="recap-summary"><div class="stat" style="grid-column:1/-1"><strong id="recapMonthTotal">0</strong><span>Total Bulan</span></div></div><div id="dailyRecapTable"><div class="recap-empty">Memuat rekap...</div></div></div><div id="adminOrders" style="margin-top:14px"><div class="empty">Memuat antrean...</div></div></div></div></div></main></section>
+<footer><div class="container"><strong>KINK SANZ</strong><br>Pusat Layanan Japost<br><span style="display:inline-block;margin-top:8px">Gunakan rekber untuk transaksi yang aman.</span></div></footer>
+<div class="modal" id="adminLoginModal"><div class="modal-card"><h2>🔐 Login Admin</h2><div class="field"><label>Email Admin</label><input id="adminEmail" class="input" type="email" placeholder="Email admin"></div><div class="field"><label>Password</label><input id="adminPassword" class="input" type="password" placeholder="Password admin"></div><p id="loginMessage" class="muted"></p><div class="modal-actions"><button class="plain-btn" onclick="closeAdminLogin()">BATAL</button><button class="submit-btn" style="margin-top:0" onclick="adminLogin()">LOGIN</button></div></div></div>
+<div class="modal" id="successModal"><div class="modal-card"><h2>✅ Antrean Terkirim</h2><p class="muted">Simpan kode pesanan ini untuk mengecek status.</p><div class="format-box" style="min-height:0;margin-top:12px" id="successDetails"></div><div class="modal-actions" style="margin-top:14px"><button class="plain-btn" onclick="closeSuccess()">TUTUP</button><button class="small-btn" onclick="copySuccessCode()">📋 COPY KODE ANTREAN</button><button class="submit-btn" style="margin-top:0" onclick="goCheckFromSuccess()">CEK ANTREAN</button></div></div></div>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script>
+// Konfigurasi Firebase project Kink Sanz
+const firebaseConfig={apiKey:"AIzaSyDKMzDK_MMLwqvREWc9ohxAM4_N1gjY6rA",authDomain:"kinksanzjp.firebaseapp.com",projectId:"kinksanzjp",storageBucket:"kinksanzjp.firebasestorage.app",messagingSenderId:"188091197436",appId:"1:188091197436:web:b39723d392598a0e7a3479",measurementId:"G-0DFV721261"};
+let db=null,auth=null,firebaseReady=false,currentType='sell',selectedPhoto=null,adminUser=null,ordersCache=[],adminUnsub=null,activeFilter='ALL',cleanupTimer=null;
+try{firebase.initializeApp(firebaseConfig);auth=firebase.auth();db=firebase.firestore();firebaseReady=true;auth.onAuthStateChanged(user=>{adminUser=user;if(user&&user.email==='sanzstokress@gmail.com'){showPage('admin');listenAdminOrders()}else if(adminUnsub){adminUnsub();adminUnsub=null}})}catch(e){console.error(e)}
+function toggleMenu(){document.getElementById('menuBox').classList.toggle('show')}
+document.addEventListener('click',e=>{const menu=document.getElementById('menuBox'),btn=document.querySelector('.menu-btn');if(menu&&!menu.contains(e.target)&&!btn.contains(e.target))menu.classList.remove('show')});
+function showPage(name){
+  if(name==='cek'){setTimeout(loadPublicQueue,50);}
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));const el=document.getElementById(name+'Page');if(el)el.classList.add('active');document.getElementById('menuBox').classList.remove('show');window.scrollTo({top:0,behavior:'smooth'});if(name==='admin'&&adminUser)listenAdminOrders()}
+function setType(type){currentType=type;document.getElementById('sellBtn').classList.toggle('active',type==='sell');document.getElementById('buyBtn').classList.toggle('active',type==='buy');document.getElementById('sellFields').style.display=type==='sell'?'block':'none';document.getElementById('buyFields').style.display=type==='buy'?'block':'none';document.getElementById('submitMessage').textContent=''}
+function previewPhoto(e){const f=e.target.files&&e.target.files[0];selectedPhoto=f||null;const img=document.getElementById('photoPreview');if(!f){img.classList.remove('show');img.removeAttribute('src');return}if(!f.type.startsWith('image/')){alert('File harus berupa foto.');e.target.value='';selectedPhoto=null;return}if(f.size>8*1024*1024){alert('Ukuran foto maksimal 8 MB.');e.target.value='';selectedPhoto=null;return}img.src=URL.createObjectURL(f);img.classList.add('show')}
+function digits(s){return String(s||'').replace(/\D/g,'')}
+function normalizedPhone(s){let d=digits(s);if(d.startsWith('0'))d='62'+d.slice(1);return d}
+function makeFormat(type,data){if(type==='sell')return `FORMAT JASA POST KINK SANZ!\n( BUKAN MILIK ADMIN )\n\n*SPEK*: ${data.spek}\n*DANA*: ${data.dana}\n*4 NO BELAKANG LU*: ${data.four}\n\nWAJIB MENGGUNAKAN REKBER KINK SANZ AGAR TERHINDAR DARI PENIPUAN\n\nWA REKBER KINK SANZ 085236988992`;return `FORMAT JP NEED KINK SANZ\n\n*NEED*: ${data.need}\n*HARGA*: ${data.harga}\n*LOG*: ${data.log}\n*MC*: KINK SANZ\n*4 NO BELAKANG LU*: ${data.four}\n\n➖ NOMOR REKBER HANYA DI\n085236988992\n➖ WAJIB MENGGUNAKAN MC KINK SANZ`}
+async function photoToDataURL(file){
+  if(!file)return '';
+  if(!file.type.startsWith('image/'))throw new Error('File harus berupa foto.');
+  // Simpan foto dengan resolusi asli; jangan resize ke 480px atau kompres JPEG rendah.
+  // Batas ukuran dijaga agar dokumen Firestore tidak melewati batas ukuran dokumen.
+  const data=await new Promise((resolve,reject)=>{
+    const reader=new FileReader();
+    reader.onload=()=>resolve(reader.result);
+    reader.onerror=()=>reject(new Error('Foto gagal dibaca.'));
+    reader.readAsDataURL(file);
+  });
+  if(typeof data!=='string'||data.length>850000)throw new Error('Ukuran foto terlalu besar untuk disimpan langsung di Firestore. Pilih foto dengan ukuran file lebih kecil (maksimal sekitar 600 KB) agar kualitas tetap tajam.');
+  return data;
+}
+async function submitOrder(){const msg=document.getElementById('submitMessage'),btn=document.getElementById('submitBtn');msg.textContent='';if(!firebaseReady){msg.textContent='Firebase belum berhasil dimuat. Periksa koneksi internet.';return}const wa=document.getElementById('whatsapp').value.trim(),d=digits(wa);if(d.length<8){msg.textContent='Masukkan nomor WhatsApp yang benar.';return}let data={whatsapp:wa,whatsappDigits:d};if(currentType==='sell'){data.spek=document.getElementById('spekSell').value.trim();data.dana=document.getElementById('danaSell').value.trim();data.four=digits(document.getElementById('fourSell').value);if(!data.spek||!data.dana){msg.textContent='Isi Spek dan Dana terlebih dahulu.';return}if(data.four.length!==4||!d.endsWith(data.four)){msg.textContent='4 angka terakhir harus sama dengan nomor WhatsApp.';return}if(!selectedPhoto){msg.textContent='Upload foto akun terlebih dahulu.';return}}else{data.need=document.getElementById('needBuy').value.trim();data.harga=document.getElementById('hargaBuy').value.trim();data.log=document.getElementById('logBuy').value.trim();data.four=digits(document.getElementById('fourBuy').value);if(!data.need||!data.harga||!data.log){msg.textContent='Isi Need, Harga, dan Log terlebih dahulu.';return}if(data.four.length!==4||!d.endsWith(data.four)){msg.textContent='4 angka terakhir harus sama dengan nomor WhatsApp.';return}}
+btn.disabled=true;btn.textContent='MENGIRIM...';try{const now=new Date(),year=now.getFullYear(),counterRef=db.collection('settings').doc('japostCounter_'+year);let orderCode='',queueNo=0;const orderRef=db.collection('japostQueue').doc();await db.runTransaction(async tx=>{const snap=await tx.get(counterRef);const counterData=snap.exists?snap.data():{};queueNo=(counterData.last||0)+1;const dateKey=`${year}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;const dailyCounts={...(counterData.dailyCounts||{})};dailyCounts[dateKey]=(dailyCounts[dateKey]||0)+1;tx.set(counterRef,{last:queueNo,year:year,dailyCounts},{merge:true});orderCode=`KS-${year}-${String(queueNo).padStart(4,'0')}`;});const photoData=(currentType==='sell'&&selectedPhoto)?await photoToDataURL(selectedPhoto):'';const format=makeFormat(currentType,data);const payload={queueNo,orderCode,type:currentType.toUpperCase(),whatsapp:wa,whatsappDigits:d,format,photoData,photoName:selectedPhoto?selectedPhoto.name:'',status:'MENUNGGU',createdAt:firebase.firestore.FieldValue.serverTimestamp(),createdAtMs:Date.now()};await orderRef.set(payload);document.getElementById('successDetails').textContent=`NO ANTREAN: #${String(queueNo).padStart(3,'0')}\nKODE: ${orderCode}\n\n${format}\n\nFOTO: ${photoData?'TERSIMPAN':'TIDAK ADA'}`;document.getElementById('successModal').classList.add('show');document.getElementById('lookupCode').value=orderCode;document.getElementById('spekSell').value='';document.getElementById('danaSell').value='';document.getElementById('fourSell').value='';document.getElementById('needBuy').value='';document.getElementById('hargaBuy').value='';document.getElementById('logBuy').value='';document.getElementById('fourBuy').value='';document.getElementById('whatsapp').value='';document.getElementById('sellPhoto').value='';selectedPhoto=null;document.getElementById('photoPreview').classList.remove('show');document.getElementById('photoPreview').removeAttribute('src');}catch(err){console.error(err);msg.textContent='Gagal mengirim antrean. Periksa Firestore Rules dan koneksi. Detail: '+(err.message||err)}finally{btn.disabled=false;btn.textContent='KIRIM ANTREAN'}}
+async function copySuccessCode(){const code=document.getElementById('lookupCode').value.trim().toUpperCase();if(!code)return;try{await navigator.clipboard.writeText(code);alert('Kode antrean berhasil disalin: '+code)}catch(e){prompt('Salin kode antrean:',code)}} function closeSuccess(){document.getElementById('successModal').classList.remove('show')}function goCheckFromSuccess(){closeSuccess();showPage('cek');checkOrder()}
+async function loadPublicQueue(){
+  const info=document.getElementById('publicQueueInfo'), list=document.getElementById('publicQueueList');
+  if(!info||!list)return;
+  if(!firebaseReady){info.textContent='Firebase belum siap.';list.innerHTML='<div class="empty">Firebase belum siap.</div>';return}
+  try{
+    const snap=await db.collection('japostQueue').orderBy('queueNo','asc').limit(100).get();
+    const now=Date.now();
+    const items=snap.docs.map(d=>({id:d.id,...d.data()})).filter(o=>{
+      const st=o.status||'MENUNGGU';
+      if(st==='MENUNGGU') return true;
+      if(st==='UDAH DI POST') return !!o.postedAtMs && (now-o.postedAtMs)<3600000;
+      return false;
+    });
+    info.innerHTML='<b>JUMLAH ANTREAN: '+items.length+'</b>';
+    if(!items.length){list.innerHTML='<div class="empty">Tidak ada antrean saat ini.</div>';return}
+    list.innerHTML=items.map(o=>{
+      const cls=o.status==='UDAH DI POST'?'accepted':'';
+      return `<article class="queue-item"><h3>Antrean #${String(o.queueNo||0).padStart(3,'0')}</h3><p>Kode: <b>${esc(o.orderCode||'-')}</b><br>Status: <span class="status-pill ${cls}">${esc(o.status||'MENUNGGU')}</span></p><button class="small-btn" onclick="copyQueueCode('${esc(o.orderCode||'')}')">📋 COPY KODE ANTREAN</button></article>`;
+    }).join('');
+  }catch(e){
+    console.error(e); info.textContent='Antrean tidak dapat dimuat.'; list.innerHTML='<div class="empty">Gagal memuat daftar antrean. Jika Firebase Rules membatasi pembacaan publik, izinkan read pada japostQueue.</div>';
+  }
+}
+function copyQueueCode(code){
+  if(!code)return;
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(code).then(()=>alert('Kode antrean disalin: '+code)).catch(()=>prompt('Copy kode antrean:',code));}
+  else prompt('Copy kode antrean:',code);
+}
+
+async function checkOrder(){const code=document.getElementById('lookupCode').value.trim().toUpperCase(),out=document.getElementById('lookupResult');if(!code){out.innerHTML='<div class="empty">Masukkan kode pesanan.</div>';return}if(!firebaseReady){out.innerHTML='<div class="empty">Firebase belum siap.</div>';return}out.innerHTML='<div class="empty">Mencari pesanan...</div>';try{const snap=await db.collection('japostQueue').where('orderCode','==',code).limit(1).get();if(snap.empty){out.innerHTML='<div class="empty">Kode tidak ditemukan. Periksa kembali kode pesanan.</div>';return}const o=snap.docs[0].data();const statusClass=o.status==='UDAH DI POST'?'accepted':o.status==='DITOLAK'?'rejected':'';out.innerHTML=`<div class="queue-item"><h3>Antrean #${String(o.queueNo).padStart(3,'0')} · ${esc(o.orderCode)}</h3><p>Jenis: <b>${esc(o.type)}</b><br>Status: <span class="status-pill ${statusClass}">${esc(o.status||'MENUNGGU')}</span><br>Nomor WA: ${esc(maskPhone(o.whatsapp||''))}</p></div>`}catch(e){console.error(e);out.innerHTML='<div class="empty">Gagal mengecek antrean. Periksa Firebase Rules.</div>'}}
+function maskPhone(p){const d=digits(p);return d.length>5?d.slice(0,3)+'••••'+d.slice(-3):p}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function openAdminLogin(){document.getElementById('menuBox').classList.remove('show');document.getElementById('adminLoginModal').classList.add('show')};function closeAdminLogin(){document.getElementById('adminLoginModal').classList.remove('show')}
+async function adminLogin(){const email=document.getElementById('adminEmail').value.trim(),pass=document.getElementById('adminPassword').value,msg=document.getElementById('loginMessage');msg.textContent='';if(!firebaseReady){msg.textContent='Firebase belum siap.';return}if(email.toLowerCase()!=='sanzstokress@gmail.com'){msg.textContent='Email ini bukan email admin.';return}try{const cred=await auth.signInWithEmailAndPassword(email,pass);if(cred.user.email!=='sanzstokress@gmail.com'){await auth.signOut();throw new Error('Akun bukan admin.')}adminUser=cred.user;closeAdminLogin();showPage('admin');listenAdminOrders();loadDailyRecap()}catch(e){console.error(e);msg.textContent='Login gagal: '+(e.message||'periksa email dan password')}}
+async function adminLogout(){if(adminUnsub){adminUnsub();adminUnsub=null}if(cleanupTimer){clearInterval(cleanupTimer);cleanupTimer=null}try{await auth.signOut()}catch(e){}adminUser=null;showPage('home')}
+let recapData={};
+function setupRecapControls(){
+  const m=document.getElementById('recapMonth'), y=document.getElementById('recapYear');
+  if(!m||!y)return;
+  if(!m.options.length){const names=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];m.innerHTML=names.map((n,i)=>`<option value="${i+1}">${n}</option>`).join('');}
+  const now=new Date();m.value=String(now.getMonth()+1);y.value=String(now.getFullYear());
+}
+async function loadDailyRecap(){
+  if(!adminUser||adminUser.email!=='sanzstokress@gmail.com'||!db)return;
+  setupRecapControls();
+  const y=Number(document.getElementById('recapYear').value)||new Date().getFullYear();
+  const month=Number(document.getElementById('recapMonth').value)||new Date().getMonth()+1;
+  const table=document.getElementById('dailyRecapTable');
+  table.innerHTML='<div class="recap-empty">Memuat rekap...</div>';
+  try{
+    const snap=await db.collection('settings').doc('japostCounter_'+y).get();
+    recapData=snap.exists?(snap.data().dailyCounts||{}):{};
+    const days=new Date(y,month,0).getDate();
+    let total=0,rows='';
+    const now=new Date(),todayKey=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+    for(let d=1;d<=days;d++){
+      const key=`${y}-${String(month).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      const count=Number(recapData[key]||0);
+      total+=count;
+      // Tampilkan tanggal/bulan/tahun hanya pada hari yang benar-benar ada order.
+      if(count>0){
+        const badge=key===todayKey?' <span class="today-badge">HARI INI</span>':'';
+        rows+=`<tr><td>${String(d).padStart(2,'0')}${badge}</td><td>${key}</td><td>${count} order</td></tr>`;
+      }
+    }
+    document.getElementById('recapMonthTotal').textContent=total;
+    table.innerHTML=rows
+      ? `<table class="recap-table"><thead><tr><th>Hari</th><th>Tanggal</th><th>Order</th></tr></thead><tbody>${rows}</tbody></table>`
+      : '<div class="recap-empty">Belum ada order pada bulan ini.</div>';
+  }catch(e){console.error(e);document.getElementById('dailyRecapTable').innerHTML='<div class="recap-empty">Rekap gagal dimuat. Pastikan Rules mengizinkan admin membaca settings/japostCounter_TAHUN.</div>';}
+}
+async function cleanupExpiredOrders(){
+  // Data antrean tidak dihapus otomatis. Penghapusan permanen hanya lewat tombol admin.
+  return;
+}
+function listenAdminOrders(){
+  if(!adminUser||adminUser.email!=='sanzstokress@gmail.com'||!db)return;
+  if(adminUnsub)adminUnsub();
+  if(cleanupTimer)clearInterval(cleanupTimer);
+  cleanupExpiredOrders();
+  cleanupTimer=setInterval(cleanupExpiredOrders,60*1000);
+  adminUnsub=db.collection('japostQueue').orderBy('createdAtMs','desc').onSnapshot(snap=>{
+    ordersCache=snap.docs.map(d=>({id:d.id,...d.data()}));
+    renderAdminOrders();
+  },err=>{
+    console.error(err);
+    document.getElementById('adminOrders').innerHTML='<div class="empty">Tidak bisa memuat data. Periksa Firestore Rules.</div>';
+  });
+}
+function setFilter(f){activeFilter=f;document.getElementById('filterAll').classList.toggle('active',f==='ALL');document.getElementById('filterWait').classList.toggle('active',f==='MENUNGGU');renderAdminOrders()}
+function renderAdminOrders(){
+ const all=ordersCache;
+ const recapBox=document.getElementById('recapBox');
+ if(recapBox) recapBox.style.display=all.length>0?'':'none';
+ document.getElementById('statAll').textContent=all.length;
+ document.getElementById('statWait').textContent=all.filter(o=>(o.status||'MENUNGGU')==='MENUNGGU').length;
+ document.getElementById('statDone').textContent=all.filter(o=>o.status==='UDAH DI POST').length;
+ const active=all.filter(o=>(o.status||'MENUNGGU')==='MENUNGGU');
+ const info=document.getElementById('activeQueueInfo');
+ if(info) info.innerHTML='<b>ANTREAN AKTIF: '+active.length+'</b><br><span style="color:#8faebb">'+(active.length?active.map(o=>'#'+String(o.queueNo||0).padStart(3,'0')+' · '+esc(o.orderCode||'')).join('<br>'):'Tidak ada antrean menunggu.')+'</span>';
+ const list=activeFilter==='ALL'?all:all.filter(o=>(o.status||'MENUNGGU')===activeFilter);
+ const root=document.getElementById('adminOrders');
+ if(!list.length){root.innerHTML='<div class="empty">Belum ada pesanan pada filter ini.</div>';return}
+ root.innerHTML=list.map(o=>{
+  const status=o.status||'MENUNGGU';
+  const cls=status==='UDAH DI POST'?'accepted':(status==='DITOLAK'||status==='DIHAPUS')?'rejected':'';
+  const isDeleted=status==='DIHAPUS';
+  return `<article class="queue-item"><h3>Antrean #${String(o.queueNo||0).padStart(3,'0')} · ${esc(o.orderCode||'')}</h3><p><span class="status-pill ${cls}">${esc(status)}</span><br>Jenis: <b>${esc(o.type||'')}</b><br>WA: <a style="color:#6ed2ff" href="https://wa.me/${esc(normalizedPhone(o.whatsapp||''))}" target="_blank" rel="noopener">${esc(o.whatsapp||'')}</a><br>Dikirim: ${o.createdAtMs?new Date(o.createdAtMs).toLocaleString('id-ID'):'-'}</p><div class="format-box">${esc(o.format||'')}</div>${o.photoData?`<div style="margin-top:12px"><img src="${o.photoData}" alt="Foto akun" style="max-width:100%;max-height:260px;object-fit:contain;border-radius:12px;border:1px solid #315d70"></div>`:''}<div class="row-actions"><button class="small-btn good" onclick="shareQueue('${o.id}')">${o.photoData?'📤 BAGIKAN FOTO + FORMAT':'📤 BAGIKAN FORMAT BUY'}</button><button class="small-btn" onclick="copyFormat('${o.id}')">📋 SALIN FORMAT</button>${status!=='UDAH DI POST'?`<button class="small-btn good" onclick="updateStatus('${o.id}','UDAH DI POST')">✓ TERIMA</button>`:''}${!isDeleted?`<button class="small-btn bad" onclick="updateStatus('${o.id}','DIHAPUS')">🗑 HAPUS</button>`:`<button class="small-btn bad" onclick="deletePermanently('${o.id}')">❌ HAPUS PERMANEN</button>`}</div></article>`
+ }).join('');
+}
+function findOrder(id){return ordersCache.find(o=>o.id===id)}
+async function shareQueue(id){
+ const o=findOrder(id);if(!o)return;
+ if(o.photoData){await downloadPhoto(id);return;}
+ const text=(o.format||'')+'\n\nKode antrean: '+(o.orderCode||'');
+ try{
+   if(navigator.share){await navigator.share({title:'KINK SANZ '+(o.orderCode||''),text});}
+   else if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText(text);alert('Format BUY disalin. Tempelkan ke WhatsApp atau aplikasi tujuan.');}
+   else{prompt('Salin format BUY ini:',text);}
+ }catch(e){if(e&&e.name==='AbortError')return;try{prompt('Salin format BUY ini:',text);}catch(_){alert('Format: '+text)}}
+}
+async function downloadPhoto(id){
+ const o=findOrder(id);
+ if(!o||!o.photoData){alert('Foto tidak ditemukan di data antrean.');return}
+ try{
+   const parts=o.photoData.split(',');
+   const mime=(parts[0].match(/data:([^;]+)/)||[])[1]||'image/jpeg';
+   const binary=atob(parts[1]||'');
+   const bytes=new Uint8Array(binary.length);
+   for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);
+   const ext=mime.includes('png')?'png':mime.includes('webp')?'webp':'jpg';
+   const file=new File([bytes],(o.orderCode||'kink-sanz-foto')+'.'+ext,{type:mime});
+   if(navigator.share && navigator.canShare && navigator.canShare({files:[file]})){
+     await navigator.share({files:[file],title:'KINK SANZ '+(o.orderCode||''),text:(o.format||'')+'\n\nKode antrean: '+(o.orderCode||'')});
+     return;
+   }
+   showPhotoSavePanel(o.photoData,o.orderCode||'KINK SANZ',o.format||'');
+ }catch(e){
+   if(e && e.name==='AbortError')return;
+   console.error(e);
+   showPhotoSavePanel(o.photoData,o.orderCode||'KINK SANZ',o.format||'');
+ }
+}
+function showPhotoSavePanel(data,code,format=''){ 
+ let old=document.getElementById('photoSaveModal');if(old)old.remove();
+ const modal=document.createElement('div');modal.id='photoSaveModal';modal.className='modal show';
+ const safe=String(code).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ modal.innerHTML='<div class="modal-card"><h2>Foto Akun</h2><p class="muted">Bagikan foto sekaligus teks format antrean.</p><div class="format-box" id="photoShareFormat" style="min-height:0;margin:10px 0;max-height:150px;overflow:auto"></div><img id="photoSavePreview" alt="Foto akun" style="display:block;width:100%;max-height:55vh;object-fit:contain;border-radius:12px;background:#061822;margin:12px 0"><div class="modal-actions"><button class="plain-btn" id="closePhotoSave">TUTUP</button><button class="submit-btn" id="sharePhotoSave" style="margin-top:0">BAGIKAN FOTO + FORMAT</button></div></div>';
+ document.body.appendChild(modal);
+ modal.querySelector('#photoSavePreview').src=data;modal.querySelector('#photoShareFormat').textContent=format||'';
+ modal.querySelector('#closePhotoSave').onclick=()=>modal.remove();
+ modal.querySelector('#sharePhotoSave').onclick=async()=>{
+  try{
+   const parts=data.split(',');const mime=(parts[0].match(/data:([^;]+)/)||[])[1]||'image/jpeg';const bin=atob(parts[1]||'');const bytes=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+   const ext=mime.includes('png')?'png':mime.includes('webp')?'webp':'jpg';const file=new File([bytes],String(code).replace(/[^a-z0-9_-]/gi,'_')+'.'+ext,{type:mime});
+   if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],title:'KINK SANZ '+String(code),text:(format||'')+'\n\nKode antrean: '+String(code)});}
+   else{alert('Fitur berbagi file tidak didukung browser ini. Coba buka HTML di Chrome atau gunakan screenshot foto.');}
+  }catch(e){if(e.name!=='AbortError')alert('Gagal membuka menu berbagi: '+(e.message||e));}
+ };
+}
+async function copyFormat(id){const o=findOrder(id);if(!o)return;try{await navigator.clipboard.writeText(o.format||'');alert('Format berhasil disalin. Tinggal paste ke Status WhatsApp.')}catch(e){prompt('Salin format ini:',o.format||'')}}async function copyFull(id){const o=findOrder(id);if(!o)return;const t=o.format||'';try{await navigator.clipboard.writeText(t);alert('Format berhasil disalin. Foto bisa dilihat di panel admin.')}catch(e){prompt('Salin:',t)}}
+async function updateStatus(id,status){
+  if(!adminUser||adminUser.email!=='sanzstokress@gmail.com'){alert('Login admin terlebih dahulu.');return}
+  const o=findOrder(id); if(!o)return;
+
+  if(status==='UDAH DI POST'){
+    if(!confirm('Terima order ini? Setelah diterima, format dan foto order akan langsung dihapus permanen.'))return;
+    try{
+      await db.collection('japostQueue').doc(id).delete();
+      ordersCache=ordersCache.filter(x=>x.id!==id);
+      renderAdminOrders();
+      alert('Order diterima. Format dan foto langsung dihapus.');
+    }catch(e){
+      console.error('ERROR ACCEPT/DELETE ORDER:',e);
+      alert('Gagal menerima dan menghapus order.\nKode: '+(e.code||'tidak diketahui')+'\nPesan: '+(e.message||e));
+    }
+    return;
+  }
+
+  const promptText=status==='DIHAPUS'?'Sembunyikan order ini? Format dan foto tetap tersimpan, dan order masih bisa diterima lagi.':`Ubah status menjadi ${status}?`;
+  if(!confirm(promptText))return;
+  try{
+    const now=Date.now();
+    const patch={status,updatedAt:firebase.firestore.FieldValue.serverTimestamp(),updatedAtMs:now};
+    await db.collection('japostQueue').doc(id).update(patch);
+    o.status=status;o.updatedAtMs=now;
+    renderAdminOrders();
+  }catch(e){
+    console.error('ERROR UPDATE STATUS:',e);
+    alert('Gagal mengubah status.\nKode: '+(e.code||'tidak diketahui')+'\nPesan: '+(e.message||e));
+  }
+}
+async function deletePermanently(id){
+  if(!adminUser||adminUser.email!=='sanzstokress@gmail.com'){alert('Login admin terlebih dahulu.');return}
+  const o=findOrder(id);if(!o)return;
+  if(!confirm('HAPUS PERMANEN '+(o.orderCode||'antrean ini')+'? Format dan foto akan dihapus dari Firestore dan tidak bisa dipulihkan.'))return;
+  try{
+    await db.collection('japostQueue').doc(id).delete();
+    ordersCache=ordersCache.filter(x=>x.id!==id);
+    renderAdminOrders();
+    alert('Antrean dihapus permanen.');
+  }catch(e){console.error('ERROR DELETE PERMANENT:',e);alert('Gagal hapus permanen.\nKode: '+(e.code||'tidak diketahui')+'\nPesan: '+(e.message||e));}
+}
+
+
+</script>
+</body>
+</html>
